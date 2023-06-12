@@ -97,6 +97,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular-devkit/build-angular:deploy",
+          "options": {
+            "baseHref": "/itop1000-test/"
+          },
+          "configurations": {
+            "production": {
+              "baseHref": "/itop1000-test/"
+            }
+          }
         }
       }
     }

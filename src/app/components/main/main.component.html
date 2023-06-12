@@ -1,0 +1,31 @@
+<div class="currency-converter">
+  <div class="input-container">
+    <input
+      type="number"
+      [(ngModel)]="amount1"
+      (ngModelChange)="convertCurrency1()"
+      placeholder="Amount"
+    />
+    <select [(ngModel)]="currency1" (ngModelChange)="convertCurrency1()">
+      <option *ngFor="let currency of currencies">{{ currency }}</option>
+    </select>
+  </div>
+
+  <div class="input-container">
+    <input
+      type="number"
+      [(ngModel)]="amount2"
+      (ngModelChange)="convertCurrency2()"
+      placeholder="Amount"
+    />
+    <select [(ngModel)]="currency2" (ngModelChange)="convertCurrency2()">
+      <option *ngFor="let currency of currencies">{{ currency }}</option>
+    </select>
+  </div>
+
+  <div class="result">
+    <span>{{ amount1 | number : "1.2-2" }} {{ currency1 }}</span>
+    <span class="equals">=</span>
+    <span>{{ amount2 | number : "1.2-2" }} {{ currency2 }}</span>
+  </div>
+</div>
